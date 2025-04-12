@@ -31,7 +31,7 @@ A breadcrumb is a collaborative scratch pad that allow the user and agent to get
 
 1. At the start of each new task, ask me for a breadcrumb file name if you can't determine a suitable one.
 
-2. Create the breadcrumb file in the `.github/.copilot/breadcrumbs` folder using the format: `yyyy-mm-dd-HHMM-{title}.md`
+2. Create the breadcrumb file in the `.github/.copilot/breadcrumbs` folder using the format: `yyyy-mm-dd-HHMM-{title}.md` (*year-month-date-24hourtime-{title}.md*)
 
 3. Structure the breadcrumb file with these required sections:
    - **Requirements**: Clear list of what needs to be implemented.
