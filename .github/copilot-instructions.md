@@ -31,7 +31,7 @@ A breadcrumb is a collaborative scratch pad that allow the user and agent to get
 
 1. At the start of each new task, ask me for a breadcrumb file name if you can't determine a suitable one.
 
-2. Create the breadcrumb file in the `.github/.copilot/breadcrumbs` folder using the format: `yyyy-mm-dd-{title}.md`
+2. Create the breadcrumb file in the `.github/.copilot/breadcrumbs` folder using the format: `yyyy-mm-dd-HHMM-{title}.md`
 
 3. Structure the breadcrumb file with these required sections:
    - **Requirements**: Clear list of what needs to be implemented.
@@ -83,7 +83,7 @@ This practice creates a trail of decision points that document our thought proce
 
 **User**: Use "jwt-auth-implementation"
 
-**Agent**: I've created the breadcrumb file `2025-04-08-jwt-auth-implementation.md`. Are you happy with this implementation plan?
+**Agent**: I've created the breadcrumb file `2025-04-08-1430-jwt-auth-implementation.md`. Are you happy with this implementation plan?
 
 [high level plan with tasks here]
 
