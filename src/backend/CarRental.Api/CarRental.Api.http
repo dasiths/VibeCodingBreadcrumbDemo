@@ -1,0 +1,54 @@
+@CarRental.Api_HostAddress = https://localhost:7055
+
+### Vehicle Endpoints
+
+# Get all vehicles
+GET {{CarRental.Api_HostAddress}}/api/vehicles
+Accept: application/json
+
+###
+
+# Get a specific vehicle by ID
+GET {{CarRental.Api_HostAddress}}/api/vehicles/1
+Accept: application/json
+
+###
+
+# Search for vehicles
+GET {{CarRental.Api_HostAddress}}/api/vehicles?searchTerm=Honda&pageNumber=1&pageSize=10
+Accept: application/json
+
+###
+
+### Make Endpoints
+
+# Get all makes
+GET {{CarRental.Api_HostAddress}}/api/makes
+Accept: application/json
+
+###
+
+# Get a specific make by ID
+GET {{CarRental.Api_HostAddress}}/api/makes/1
+Accept: application/json
+
+###
+
+### Model Endpoints
+
+# Get a specific model by ID
+GET {{CarRental.Api_HostAddress}}/api/models/1
+Accept: application/json
+
+###
+
+# Get all models for a specific make
+GET {{CarRental.Api_HostAddress}}/api/makes/1/models
+Accept: application/json
+
+###
+
+GET {{CarRental.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
