@@ -24,7 +24,7 @@ Key aspects of these instructions include:
 
 3.  **The Breadcrumb Protocol:** This is the central pillar of the collaborative process:
     * **Purpose:** To create a shared "scratchpad" or log (a "breadcrumb" file) for each task, ensuring alignment between the user and the agent, and documenting the development journey.
-    * **Creation:** For each new task, a breadcrumb file is created in `.github/.copilot/breadcrumbs` with the format `yyyy-mm-dd-{title}.md`.
+    * **Creation:** For each new task, a breadcrumb file is created in `.github/.copilot/breadcrumbs` with the format `yyyy-mm-dd-HHMM-{title}.md`.
     * **Structure:** Each breadcrumb file includes mandatory sections: Requirements, User Comments, Plan, Decisions, Implementation Details, Changes Made, Before/After Comparison, and References.
     * **Workflow:**
         * Updates happen *before* coding changes.
