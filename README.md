@@ -8,7 +8,11 @@ The core idea is to establish a predictable and transparent workflow where the A
 
 ## How It Works: Agent Instructions
 
-The AI agent operating within this repository is expected to follow a specific set of rules and protocols defined in its prompt (often configured within the AI tool's settings or provided at the start of an interaction). Key aspects of these instructions include:
+The AI agent operating within this repository is expected to follow a specific set of rules and protocols defined in its prompt (often configured within the AI tool's settings or provided at the start of an interaction). 
+
+See the [full prompt](.github/copilot-instructions.md) for more details.
+
+Key aspects of these instructions include:
 
 1.  **Domain Knowledge Integration:**
     * The agent uses files within `.github/.copilot/domain_knowledge` as the authoritative source for understanding the project's context, entities, workflows, and language.
