@@ -4,7 +4,7 @@
 
 **Last Updated:** 2025-04-13
 
-**Owner:** Car Rental API Team
+**Owner:** Dasith Wijes
 
 ## 1. Purpose & Scope
 
