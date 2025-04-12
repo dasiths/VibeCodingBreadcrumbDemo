@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+  "name": "C# (.NET)",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "9.0"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-dotnettools.csdevkit"]
+    }
+  },
+  "forwardPorts": ["4201:4201"],
+  "mounts": [
+    // Map host .ssh directory to container
+    "source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/codespace/.ssh,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "npm install -g @angular/cli"  // Install Angular CLI after container is created
+}
