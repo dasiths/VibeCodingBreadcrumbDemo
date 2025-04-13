@@ -31,7 +31,7 @@ The core idea is to establish a predictable and transparent workflow where the A
     - Provide input, confirm plans.
     - If the agent in veering off path, pause, give it instructions and ask to update the breadcrumb with the new context before continuing.
     - You also have the opportunity to update breadcrumb yourself and start a new conversation with the agent and continue from where it left off.
-3. Results in breadcrumb: [2025-04-13-1723-car-rental-api-setup.md](github/.copilot/breadcrumbs/2025-04-13-1723-car-rental-api-setup.md)
+3. Results in breadcrumb: [2025-04-13-1723-car-rental-api-setup.md](.github/.copilot/breadcrumbs/2025-04-13-1723-car-rental-api-setup.md)
 
 ## How It Works: Agent Instructions
 
