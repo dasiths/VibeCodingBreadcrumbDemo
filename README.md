@@ -1,10 +1,37 @@
-# AI Agent Collaboration Demo Repository
+# Breadcrumb Protocol For AI Agent Collaboration
+
+<img src="logo.png" alt="Breadcrumb Protocol" width="100px"> 
+
+The Breadcrumb Protocol is a structured workflow for collaborating with AI agents during software development. It centres around creating and maintaining shared documentation files ("breadcrumbs") that track each task's progress and serve as a single source of truth.
+
+This protocol creates a traceable history of decisions and implementations, making code reviews easier and ensuring both parties maintain shared context throughout development tasks.
 
 ## Overview
 
-This repository serves as an example showcasing a structured approach for collaborating with AI agents (like GitHub Copilot Chat or similar LLM-based assistants) during software development. It provides a specific set of instructions, defined within this project, that guide the AI agent's behavior to ensure clarity, maintain context, and produce well-documented changes.
+This repository serves as an example showcasing a structured approach for collaborating with AI agents (like GitHub Copilot Chat or similar LLM-based assistants) during software development. It provides a specific set of instructions, defined within this project, that guide the AI agent's behaviour to ensure clarity, maintain context, and produce well-documented changes.
 
 The core idea is to establish a predictable and transparent workflow where the AI agent acts as a diligent collaborator, leveraging project-specific knowledge and adhering to a defined process for planning, implementation, and documentation.
+
+## Development Workflow
+
+![Development workflow](image.png)
+
+[*Assumes spec is already created...*]
+1. Prompt the agent: 
+    ```text
+    Help me create a aspnet api project according to the spec. I don't need the database context just yet so we can return a hardcoded response from the request processor.
+
+    Location: src/backend/
+    Solution name: CarRental
+    Project name: CarRental.Api
+
+    Use dotnet 9. Use this document on instructions of how to add swagger/openapi endpoint. https://devblogs.microsoft.com/dotnet/dotnet9-openapi/
+    ```
+2. Follow conversation with agent.
+    - Provide input, confirm plans.
+    - If the agent in veering off path, pause, give it instructions and ask to update the breadcrumb with the new context before continuing.
+    - You also have the opportunity to update breadcrumb yourself and start a new conversation with the agent and continue from where it left off.
+3. Results in breadcrumb: [2025-04-13-1723-car-rental-api-setup.md](github/.copilot/breadcrumbs/2025-04-13-1723-car-rental-api-setup.md)
 
 ## How It Works: Agent Instructions
 
@@ -35,14 +62,31 @@ Key aspects of these instructions include:
     * **Execution:** The agent follows the approved plan, marks tasks as complete *after* successful implementation (including passing tests), and updates the breadcrumb accordingly.
 
 ## Repository Structure
+`.github/copilot-instructions.md`: contains instruction for the agent.
 
-The `.github/.copilot/` directory is crucial for this workflow:
-
-* `copilot-instructions.md`: Contains instruction for the agent.
+`.github/.copilot/` directory is crucial for this workflow:
 * `domain_knowledge/`: Contains files defining the project's context and rules.
 * `specifications/`: Holds requirement specifications, organized by feature or area.
     * `.template.md`: Template for new specification files.
 * `breadcrumbs/`: Stores the collaborative log files created for each task according to the Breadcrumb Protocol.
+
+Example
+```text
+.github/.copilot/
+├── breadcrumbs/
+│   ├── 2025-04-13-0130-car-rental-entity-model.md
+│   ├── 2025-04-13-0135-aspnet-core-api-specification.md
+│   └── 2025-04-13-1723-car-rental-api-setup.md
+│
+├── domain_knowledge/
+│   └── entities/
+│       └── car-rental-entities.md
+│
+└── specifications/
+    ├── application_architecture/
+    │   └── aspnet-core-minimal-api.spec.md
+    └── .template.md
+```
 
 ## Goal
 
