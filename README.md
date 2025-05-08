@@ -33,6 +33,9 @@ The core idea is to establish a predictable and transparent workflow where the A
     - You also have the opportunity to update breadcrumb yourself and start a new conversation with the agent and continue from where it left off.
 3. Results in breadcrumb: [2025-04-13-1723-car-rental-api-setup.md](.github/.copilot/breadcrumbs/2025-04-13-1723-car-rental-api-setup.md)
 
+### Demo 
+[![Demo](http://img.youtube.com/vi/etYG-6-9Mlk/0.jpg)](http://www.youtube.com/watch?v=etYG-6-9Mlk "Example")
+
 ## How It Works: Agent Instructions
 
 The AI agent operating within this repository is expected to follow a specific set of rules and protocols defined in its prompt (often configured within the AI tool's settings or provided at the start of an interaction). 
