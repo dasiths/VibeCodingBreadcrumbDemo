@@ -8,7 +8,7 @@ This protocol creates a traceable history of decisions and implementations, maki
 
 The Breadcrumb Protocol implements these themes through a simple yet powerful concept: a shared scratch pad that allows both the developer and AI to align their vision at all times. Each development task gets its own “breadcrumb” file - a single source of truth that tracks progress from requirements through implementation.
 
-You can read more about it here <https://dasith.me/2025/04/02/vibe-coding-breadcrumbs/>
+You can read more about it here <https://dasith.me/2025/04/02/vibe-coding-breadcrumbs/>.
 
 ## Overview
 
