@@ -1,4 +1,4 @@
-# Breadcrumb Protocol For AI Agent Collaboration
+# Structured workflows for coding with AI agents using the Breadcrumb Protocol
 
 <img src="logo.png" alt="Breadcrumb Protocol" width="100px"> 
 
@@ -6,18 +6,28 @@ The Breadcrumb Protocol is a structured workflow for collaborating with AI agent
 
 This protocol creates a traceable history of decisions and implementations, making code reviews easier and ensuring both parties maintain shared context throughout development tasks.
 
+The Breadcrumb Protocol implements these themes through a simple yet powerful concept: a shared scratch pad that allows both the developer and AI to align their vision at all times. Each development task gets its own “breadcrumb” file - a single source of truth that tracks progress from requirements through implementation.
+
+You can read more about it here <https://dasith.me/2025/04/02/vibe-coding-breadcrumbs/>
+
 ## Overview
 
 This repository serves as an example showcasing a structured approach for collaborating with AI agents (like GitHub Copilot Chat or similar LLM-based assistants) during software development. It provides a specific set of instructions, defined within this project, that guide the AI agent's behaviour to ensure clarity, maintain context, and produce well-documented changes.
 
 The core idea is to establish a predictable and transparent workflow where the AI agent acts as a diligent collaborator, leveraging project-specific knowledge and adhering to a defined process for planning, implementation, and documentation.
 
+1. **Structured Planning & Task Management:** Breaking complex goals into well-defined phases and actionable tasks with clear success criteria. This approach provides AI with clear, manageable units of work, reducing ambiguity and allowing it to focus its generation capabilities effectively.
+
+2. **Centralized & Accessible Knowledge Context:** Establishing designated locations with consistent naming conventions for project-related information, including domain knowledge and specifications. This makes it easier for the AI to access and utilize the “ground truth” of your project.
+
+3. **Living Documentation & Shared Understanding:** Maintaining a dynamic, collaborative record of the development process that acts as an external, persistent memory for both the developer and the AI assistant.
+
 ## Development Workflow
 
 ![Development workflow](image.png)
 
 [*Assumes spec is already created...*]
-1. Prompt the agent: 
+1. Prompt the agent: *[Instructions file has details on domain knowledge and specs]*
     ```text
     Help me create a aspnet api project according to the spec. I don't need the database context just yet so we can return a hardcoded response from the request processor.
 
